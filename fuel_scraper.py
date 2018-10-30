@@ -26,6 +26,7 @@ def fuel_day(which_day, which_fuel):
         new_dict["Price"] = entry["price"]
         new_dict["Brand"] = entry["brand"]
         new_dict["Address"] = entry["address"]
+        new_dict["Location"] = entry["location"]
         new_dict["Day"] = which_day
         fuel_output.append(new_dict)
     return fuel_output
@@ -58,7 +59,7 @@ fuel_data_row_string = ""
 for value in sorted_fuel_output:
     fuel_data_row_string += """
         <tr>
-            <td>{Price} </td><td>{Brand} </td><td>{Address} </td><td>{Day}</td>
+            <td>{Price} </td><td>{Brand} </td><td>{Address} </td><td>{Location} </td><td>{Day}</td>
         </tr>
     """.format(**value)
 

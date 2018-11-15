@@ -150,7 +150,9 @@ def create_fuel_table():
                 <td>{Price} </td><td>{Brand} </td><td>{Address} </td><td>{Location} </td><td>{Day}</td>
             </tr>
         """.format(**value)
-    return fuel_data_row_string
+
+    fuel_html = "<html><title>Fuel Report</title><body><tbody><table>" + fuel_data_row_string + "</table></tbody></body></html>"
+    return fuel_html
 
 # create_fuel_table()
 
@@ -158,7 +160,7 @@ def create_fuel_table():
 # print(fuel_data_row_string)
 
 # Formats the html data
-fuel_html = "<html><title>Fuel Report</title><body><tbody><table>" + create_fuel_table() + "</table></tbody></body></html>"
+
 
 # Printing output of fuel_html
 # print(fuel_html)
@@ -167,7 +169,7 @@ fuel_html = "<html><title>Fuel Report</title><body><tbody><table>" + create_fuel
 fuel_file = open('fuel_report.html', 'w')
 
 # Writes the the data from fuel_data_html into the fuel_report.html file.
-fuel_file.write(fuel_html)
+fuel_file.write(create_fuel_table())
 
 # Closes fuel_report.html.
 fuel_file.close()

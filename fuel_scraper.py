@@ -150,8 +150,8 @@ def create_fuel_table():
                 <td>{Price} </td><td>{Brand} </td><td>{Address} </td><td>{Location} </td><td>{Day}</td>
             </tr>
         """.format(**value)
-
     fuel_html = "<html><title>Fuel Report</title><body><tbody><table>" + fuel_data_row_string + "</table></tbody></body></html>"
+
     return fuel_html
 
 # create_fuel_table()
@@ -161,20 +161,19 @@ def create_fuel_table():
 
 # Formats the html data
 
-
 # Printing output of fuel_html
 # print(fuel_html)
 
 # Opens and creates a file named fuel_report.html with write access.
-fuel_file = open('fuel_report.html', 'w')
+# fuel_file = open('fuel_report.html', 'w')
 
 # Writes the the data from fuel_data_html into the fuel_report.html file.
-fuel_file.write(create_fuel_table())
+# fuel_file.write(fuel_html)
 
 # Closes fuel_report.html.
-fuel_file.close()
+# fuel_file.close()
 
-print("Run succesfully!")
+# print("Run succesfully!")
 # Get all regions as variables so they can be used by the function def fuel_day(which_day, which_fuel) Add the Region, Fuel type (needs to be added to function to be used) and day. Use a settings.py file (CONSTANCE?)
 
 # Use Itertools to get all combinations of URLs
